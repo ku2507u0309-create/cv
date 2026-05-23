@@ -1,0 +1,30 @@
+{
+  "name": "cinematic-portfolio",
+  "version": "1.0.0",
+  "description": "Ultra-premium cinematic 3D interactive portfolio resume inspired by Iron Man, Batman, Interstellar, and Cyberpunk interfaces",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^r156",
+    "@react-three/fiber": "^8.16.0",
+    "@react-three/drei": "^9.92.0",
+    "gsap": "^3.12.2",
+    "framer-motion": "^10.16.0",
+    "@react-three/postprocessing": "^2.15.0",
+    "postprocessing": "^6.34.0",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2"
+  }
+}

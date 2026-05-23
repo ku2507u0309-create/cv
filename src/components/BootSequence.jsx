@@ -33,11 +33,11 @@ function BootSequence() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 2 }}
         >
-          <p>> BOOTING NEURAL INTERFACE...</p>
-          <p>> INITIALIZING HOLOGRAPHIC DISPLAY...</p>
-          <p>> ACTIVATING AI ASSISTANT...</p>
-          <p>> LOADING USER PROFILE DATA...</p>
-          <p>> ESTABLISHING SECURE CONNECTION...</p>
+          <p>&gt; BOOTING NEURAL INTERFACE...</p>
+          <p>&gt; INITIALIZING HOLOGRAPHIC DISPLAY...</p>
+          <p>&gt; ACTIVATING AI ASSISTANT...</p>
+          <p>&gt; LOADING USER PROFILE DATA...</p>
+          <p>&gt; ESTABLISHING SECURE CONNECTION...</p>
         </motion.div>
       </div>
     </motion.div>

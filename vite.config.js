@@ -5,9 +5,23 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    open: true
+    open: true,
+    host: true
   },
   build: {
-    target: 'esnext'
+    target: 'esnext',
+    minify: 'terser',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'three': ['three', '@react-three/fiber', '@react-three/drei'],
+          'animation': ['gsap', 'framer-motion']
+        }
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'three', 'gsap']
   }
 })

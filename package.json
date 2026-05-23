@@ -1,13 +1,14 @@
 {
   "name": "cinematic-portfolio",
   "version": "1.0.0",
-  "description": "Ultra-premium cinematic 3D interactive portfolio resume inspired by Iron Man, Batman, Interstellar, and Cyberpunk interfaces",
+  "description": "Ultra-premium cinematic 3D interactive portfolio resume",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -15,9 +16,9 @@
     "three": "^r156",
     "@react-three/fiber": "^8.16.0",
     "@react-three/drei": "^9.92.0",
+    "@react-three/postprocessing": "^2.15.0",
     "gsap": "^3.12.2",
     "framer-motion": "^10.16.0",
-    "@react-three/postprocessing": "^2.15.0",
     "postprocessing": "^6.34.0",
     "zustand": "^4.4.1"
   },
@@ -25,6 +26,19 @@
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.0.0",
     "eslint": "^8.56.0",
-    "eslint-plugin-react": "^7.33.2"
-  }
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "keywords": [
+    "portfolio",
+    "3d",
+    "interactive",
+    "cinematic",
+    "react",
+    "three.js",
+    "gsap",
+    "framer-motion"
+  ],
+  "author": "Priya Patel",
+  "license": "MIT"
 }

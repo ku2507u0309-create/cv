@@ -1,10 +1,11 @@
 class AudioManager {
+  constructor() {
+    this.audioContext = null
+    this.soundEffects = {}
+    this.isInitialized = false
+  }
+
   static instance = null
-  audioContext = null
-  soundEffects = {}
-  backgroundMusic = null
-  masterVolume = 0.7
-  initialized = false
 
   static getInstance() {
     if (!AudioManager.instance) {
@@ -14,45 +15,50 @@ class AudioManager {
   }
 
   initialize() {
-    if (this.initialized) return
-    
+    if (this.isInitialized) return
+
     try {
-      const AudioContextClass = window.AudioContext || window.webkitAudioContext
-      this.audioContext = new AudioContextClass()
-      this.initialized = true
-      this.loadSoundEffects()
+      const AudioContext = window.AudioContext || window.webkitAudioContext
+      this.audioContext = new AudioContext()
+      this.isInitialized = true
     } catch (e) {
-      console.log('Web Audio API not supported')
+      console.warn('Audio context not available')
     }
   }
 
-  loadSoundEffects() {
-    // Sound effects would be loaded from assets
-    // This is a placeholder for the audio loading system
-    this.soundEffects = {
-      systemBoot: { file: '/sounds/system-boot.mp3', duration: 2 },
-      hologramActivate: { file: '/sounds/hologram-activate.mp3', duration: 1.5 },
-      radarPulse: { file: '/sounds/radar-pulse.mp3', duration: 0.8 },
-      targetLocked: { file: '/sounds/target-locked.mp3', duration: 1 },
-      uiClick: { file: '/sounds/ui-click.mp3', duration: 0.3 },
-      transition: { file: '/sounds/transition.mp3', duration: 1.2 }
-    }
-  }
+  playSoundEffect(name) {
+    if (!this.audioContext) return
 
-  playSoundEffect(effectName, volume = this.masterVolume) {
-    if (!this.initialized || !this.soundEffects[effectName]) return
-    
-    try {
-      const audio = new Audio(this.soundEffects[effectName].file)
-      audio.volume = volume
-      audio.play().catch(e => console.log('Audio play failed:', e))
-    } catch (e) {
-      console.log('Sound effect play error:', e)
-    }
-  }
+    const now = this.audioContext.currentTime
+    const oscillator = this.audioContext.createOscillator()
+    const gain = this.audioContext.createGain()
 
-  setMasterVolume(volume) {
-    this.masterVolume = Math.max(0, Math.min(1, volume))
+    oscillator.connect(gain)
+    gain.connect(this.audioContext.destination)
+
+    switch (name) {
+      case 'systemBoot':
+        oscillator.frequency.setValueAtTime(400, now)
+        oscillator.frequency.exponentialRampToValueAtTime(800, now + 0.5)
+        gain.gain.setValueAtTime(0.3, now)
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.5)
+        oscillator.start(now)
+        oscillator.stop(now + 0.5)
+        break
+
+      case 'hologramActivate':
+        oscillator.type = 'sine'
+        oscillator.frequency.setValueAtTime(600, now)
+        oscillator.frequency.exponentialRampToValueAtTime(1200, now + 0.3)
+        gain.gain.setValueAtTime(0.2, now)
+        gain.gain.exponentialRampToValueAtTime(0, now + 0.3)
+        oscillator.start(now)
+        oscillator.stop(now + 0.3)
+        break
+
+      default:
+        break
+    }
   }
 }
 

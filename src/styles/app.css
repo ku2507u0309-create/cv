@@ -1,0 +1,50 @@
+.app-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+  color: #00ff88;
+}
+
+.canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 255, 136, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff88;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffff;
+}
+
+/* Global Animations */
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px #00ff88);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #00ff88);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}

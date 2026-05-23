@@ -1,26 +1,23 @@
 import { create } from 'zustand'
 
 const useSceneStore = create((set) => ({
-  currentScene: 'activation',
-  isTransitioning: false,
-  audioEnabled: true,
+  currentScene: 'main',
+  setCurrentScene: (scene) => set({ currentScene: scene }),
+
+  userProfile: {
+    name: 'Priya Patel',
+    title: 'Computer Science Engineer | AI/ML Specialist',
+    location: 'Gujarat, India',
+    bio: 'Building the future with code and innovation',
+    image: '/profile.jpg'
+  },
+
   qualitySettings: {
-    particleCount: 1000,
+    particleCount: 2000,
     shadowQuality: 'high',
     postProcessing: true,
     volumetricLighting: true
-  },
-  userProfile: {
-    name: 'Priya Patel',
-    title: 'Computer Science Engineer',
-    location: 'Gujarat, India',
-    bio: 'Innovator. Builder. Visionary.',
-    image: null
-  },
-  setScene: (scene) => set({ currentScene: scene }),
-  setTransitioning: (isTransitioning) => set({ isTransitioning }),
-  setAudioEnabled: (audioEnabled) => set({ audioEnabled }),
-  setUserProfile: (profile) => set({ userProfile: { ...useSceneStore.getState().userProfile, ...profile } })
+  }
 }))
 
 export { useSceneStore }

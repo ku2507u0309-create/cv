@@ -36,7 +36,7 @@ function AdvancedFloor() {
             <meshStandardMaterial
               color="#00ff88"
               emissive="#00ff88"
-              emissiveIntensity={0.5}"
+              emissiveIntensity={0.5}
               wireframe={false}
             />
           </mesh>
@@ -52,7 +52,7 @@ function AdvancedFloor() {
             <meshStandardMaterial
               color="#0088ff"
               emissive="#0088ff"
-              emissiveIntensity={0.5}"
+              emissiveIntensity={0.5}
               wireframe={false}
             />
           </mesh>

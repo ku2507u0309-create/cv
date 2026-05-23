@@ -13,18 +13,16 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "three": "^0.172.0",
-    "@react-three/fiber": "^8.16.0",
-    "@react-three/drei": "^9.92.0",
-    "@react-three/postprocessing": "^2.15.0",
+    "three": "r168",
+    "@react-three/fiber": "^8.15.12",
+    "@react-three/drei": "^9.88.0",
     "gsap": "^3.12.2",
-    "framer-motion": "^10.16.0",
-    "postprocessing": "^6.39.0",
+    "framer-motion": "^10.16.4",
     "zustand": "^4.4.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.0.0",
+    "vite": "^5.0.8",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0"

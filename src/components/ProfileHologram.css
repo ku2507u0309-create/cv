@@ -1,0 +1,112 @@
+.profile-hologram {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  z-index: 105;
+  pointer-events: none;
+}
+
+.hologram-pod {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0, 255, 136, 0.1), rgba(0, 20, 40, 0.5));
+  border: 2px solid #00ff88;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(0, 255, 136, 0.4), inset 0 0 30px rgba(0, 255, 136, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.profile-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.1) contrast(1.1) saturate(1.3);
+}
+
+.hologram-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(0, 255, 136, 0.1), transparent);
+  animation: flicker 0.3s infinite;
+}
+
+.profile-info {
+  text-align: center;
+  color: #00ff88;
+}
+
+.profile-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00ff88;
+  margin-bottom: 5px;
+}
+
+.profile-title {
+  font-size: 0.9rem;
+  color: #0088ff;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  text-shadow: 0 0 10px #0088ff;
+}
+
+.profile-location {
+  font-size: 0.8rem;
+  color: #ff00ff;
+  letter-spacing: 1px;
+}
+
+.orbit-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00ff88;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+.hologram-ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: #0088ff;
+  border-right-color: #00ff88;
+}
+
+.ring-1 {
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  opacity: 0.5;
+}
+
+.ring-2 {
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  opacity: 0.3;
+}

@@ -1,0 +1,39 @@
+.content-section {
+  padding: 20px 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #00ff88;
+  text-shadow: 0 0 20px #00ff88;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #00ff88;
+  padding-bottom: 10px;
+}
+
+.section-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.section-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: #0088ff;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.item-marker {
+  color: #00ff88;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.section-item p {
+  margin: 0;
+}

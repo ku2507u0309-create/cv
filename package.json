@@ -1,1 +1,44 @@
-{\n  \"name\": \"cinematic-portfolio\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Ultra-premium cinematic 3D interactive portfolio resume\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"vite build\",\n    \"preview\": \"vite preview\",\n    \"lint\": \"eslint src\",\n    \"type-check\": \"tsc --noEmit\"\n  },\n  \"dependencies\": {\n    \"react\": \"^18.2.0\",\n    \"react-dom\": \"^18.2.0\",\n    \"three\": \"^0.156.0\",\n    \"@react-three/fiber\": \"^8.16.0\",\n    \"@react-three/drei\": \"^9.92.0\",\n    \"@react-three/postprocessing\": \"^2.15.0\",\n    \"gsap\": \"^3.12.2\",\n    \"framer-motion\": \"^10.16.0\",\n    \"postprocessing\": \"^6.34.0\",\n    \"zustand\": \"^4.4.1\"\n  },\n  \"devDependencies\": {\n    \"@vitejs/plugin-react\": \"^4.2.1\",\n    \"vite\": \"^5.0.0\",\n    \"eslint\": \"^8.56.0\",\n    \"eslint-plugin-react\": \"^7.33.2\",\n    \"eslint-plugin-react-hooks\": \"^4.6.0\"\n  },\n  \"keywords\": [\n    \"portfolio\",\n    \"3d\",\n    \"interactive\",\n    \"cinematic\",\n    \"react\",\n    \"three.js\",\n    \"gsap\",\n    \"framer-motion\"\n  ],\n  \"author\": \"Priya Patel\",\n  \"license\": \"MIT\"\n}\n
+{
+  "name": "cinematic-portfolio",
+  "version": "1.0.0",
+  "description": "Ultra-premium cinematic 3D interactive portfolio resume",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.156.0",
+    "@react-three/fiber": "^8.16.0",
+    "@react-three/drei": "^9.92.0",
+    "@react-three/postprocessing": "^2.15.0",
+    "gsap": "^3.12.2",
+    "framer-motion": "^10.16.0",
+    "postprocessing": "^6.34.0",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "keywords": [
+    "portfolio",
+    "3d",
+    "interactive",
+    "cinematic",
+    "react",
+    "three.js",
+    "gsap",
+    "framer-motion"
+  ],
+  "author": "Priya Patel",
+  "license": "MIT"
+}

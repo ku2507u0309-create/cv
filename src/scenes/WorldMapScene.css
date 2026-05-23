@@ -1,0 +1,118 @@
+.world-map-scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 14, 39, 0.7);
+  pointer-events: none;
+}
+
+.world-map {
+  width: 70%;
+  max-width: 800px;
+  filter: drop-shadow(0 0 30px rgba(0, 255, 136, 0.4));
+  animation: mapGlow 2s ease-in-out infinite;
+}
+
+@keyframes mapGlow {
+  0%, 100% { filter: drop-shadow(0 0 30px rgba(0, 255, 136, 0.4)); }
+  50% { filter: drop-shadow(0 0 50px rgba(0, 255, 136, 0.7)); }
+}
+
+.country-dot {
+  animation: dotPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { r: 8; opacity: 0.4; }
+  50% { r: 12; opacity: 0.8; }
+}
+
+.target-location {
+  animation: targetPulse 1s ease-in-out infinite;
+}
+
+@keyframes targetPulse {
+  0%, 100% { filter: drop-shadow(0 0 10px #ff00ff); }
+  50% { filter: drop-shadow(0 0 30px #ff00ff); }
+}
+
+.scan-lines {
+  animation: scanMove 8s linear infinite;
+}
+
+@keyframes scanMove {
+  0% { transform: translateY(-600px); }
+  100% { transform: translateY(600px); }
+}
+
+.hud-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  color: #00ff88;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.scan-status {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 20px #00ff88;
+  letter-spacing: 2px;
+  animation: flicker 0.15s infinite;
+}
+
+.target-status {
+  font-size: 1.4rem;
+  color: #ff00ff;
+  text-shadow: 0 0 20px #ff00ff;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.lock-status {
+  font-size: 1.3rem;
+  color: #00ffff;
+  text-shadow: 0 0 30px #00ffff;
+  letter-spacing: 2px;
+  animation: lockPulse 0.8s ease-in-out infinite;
+}
+
+@keyframes lockPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.map-grid {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 136, 0.03),
+    rgba(0, 255, 136, 0.03) 20px,
+    transparent 20px,
+    transparent 40px
+  ),
+  repeating-linear-gradient(
+    90deg,
+    rgba(0, 255, 136, 0.03),
+    rgba(0, 255, 136, 0.03) 20px,
+    transparent 20px,
+    transparent 40px
+  );
+  pointer-events: none;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
